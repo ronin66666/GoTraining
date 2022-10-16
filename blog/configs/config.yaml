@@ -1,0 +1,26 @@
+# 服务配置
+Server:
+  RunModel: debug
+  HttpPort: 8000
+  ReadTimeOut: 60
+  WriteTimeOut: 60
+# 应用配置
+App:
+  DefaultPageSize: 10
+  MaxPageSize: 100
+  LogSavePath: storage/logs
+  LogFileName: app
+  LogFileExt: .log
+
+#数据库配置
+Database:
+  DBType: mysql
+  Username: root
+  password: 123456
+  Host: 127.0.0.1:3306
+  DBName: blog_service
+  TablePrefix: blog_
+  Charset: utf8
+  ParseTime: True
+  MaxIdleConns: 10
+  MaxOpenConns: 30
