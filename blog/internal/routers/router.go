@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"blog/internal/middleware"
 	v1 "blog/internal/routers/api/v1"
 	"github.com/gin-gonic/gin"
 )
@@ -9,7 +10,8 @@ func NewRouter() *gin.Engine {
 	r := gin.New()
 	//使用gin的Logger和Recovery中间件
 	r.Use(gin.Logger(), gin.Recovery())
-
+	//注册国际化中间件
+	r.Use(middleware.Translations())
 	article := v1.NewArticle()
 	tag := v1.NewTag()
 

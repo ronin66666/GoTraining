@@ -161,7 +161,7 @@ func (l *Logger) Info(v ...interface{}) {
 	l.Output(LevelInfo, fmt.Sprint(v...))
 }
 
-func (l *Logger) InfoF(format string, v ...interface{}) {
+func (l *Logger) Infof(format string, v ...interface{}) {
 	l.Output(LevelInfo, fmt.Sprintf(format, v...))
 }
 
@@ -169,26 +169,26 @@ func (l *Logger) Warn(v ...interface{}) {
 	l.Output(LevelWarn, fmt.Sprint(v...))
 }
 
-func (l *Logger) WarnF(format string, v ...interface{}) {
+func (l *Logger) Warnf(format string, v ...interface{}) {
 	l.Output(LevelWarn, fmt.Sprintf(format, v...))
 }
 func (l *Logger) Error(v ...interface{}) {
 	l.Output(LevelError, fmt.Sprint(v...))
 }
 
-func (l *Logger) ErrorF(format string, v ...interface{}) {
+func (l *Logger) Errorf(format string, v ...interface{}) {
 	l.Output(LevelError, fmt.Sprintf(format, v...))
 }
 func (l *Logger) Fatal(v ...interface{}) {
 	l.Output(LevelFatal, fmt.Sprint(v...))
 }
 
-func (l *Logger) FatalF(format string, v ...interface{}) {
+func (l *Logger) Fatalf(format string, v ...interface{}) {
 	l.Output(LevelFatal, fmt.Sprintf(format, v...))
 }
 func (l *Logger) Panic(v ...interface{}) {
 	l.Output(LevelPanic, fmt.Sprint(v...))
 }
-func (l *Logger) PanicF(format string, v ...interface{}) {
+func (l *Logger) Panicf(format string, v ...interface{}) {
 	l.Output(LevelPanic, fmt.Sprintf(format, v...))
 }

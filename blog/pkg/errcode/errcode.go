@@ -31,7 +31,7 @@ func (e *Error) Error() string {
 }
 
 func (e *Error) Code() int {
-	return e.Code()
+	return e.code
 }
 func (e *Error) Msg() string {
 	return e.msg
@@ -57,15 +57,15 @@ func (e *Error) StatusCode() int {
 		return http.StatusOK
 	case ServerError.Code():
 		return http.StatusInternalServerError
-	case InvalidParam.Code():
+	case InvalidParams.Code():
 		return http.StatusBadRequest
-	case UnauthorizedAuthNotExit.Code():
+	case UnauthorizedAuthNotExist.Code():
 		fallthrough
 	case UnauthorizedTokenError.Code():
 		fallthrough
 	case UnauthorizedTokenGenerate.Code():
 		fallthrough
-	case UnauthorizedTokenTimeOut.Code():
+	case UnauthorizedTokenTimeout.Code():
 		return http.StatusUnauthorized
 	case TooManyRequests.Code():
 		return http.StatusTooManyRequests

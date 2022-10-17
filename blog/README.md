@@ -44,3 +44,21 @@
 `go get -u gopkg.in/natefinch/lumberjack.v2`
 核心功能：把日志写入到滚动文件中，该库允许我们设置单日志文件的最大占用空间、最大生存周期、可保留的最多就文件数等，如果有出现超出设置项的情况，则对日志文件进行滚动处理
 这个库可以减免一些文件操作类的代码编写，把核心逻辑摆在日志标准化处理上
+
+### 接口文档 
+Swagger
+``` bash
+go get -u github.com/swaggo/swag/cmd/swag
+go get -u github.com/swaggo/gin-swagger
+go get -u github.com/swaggo/files
+go get -u github.com/alecthomas/template
+```
+
+### 接口校验
+使用开源库 `go-playground/validator`
+gin框架内部模型绑定和验证默认使用的就是这个库
+
+
+
+
+
